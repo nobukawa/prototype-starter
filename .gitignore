@@ -1,0 +1,28 @@
+# gitignore
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.idea/
+.cache
+.project
+.settings
+.tmproj
+.esproj
+.sublime-project
+.sublime-workspace
+
+# Extensions
+*~
+*.diff
+*.log
+*.sass-cache
+
+# Folders
+.svn
+.ssh
+.grunt
+.vagrant
+.vagrant.d
+node_modules
+npm-debug.log
