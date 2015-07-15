@@ -1,20 +1,32 @@
 # Prototype starter
 
-A prototype project starter.
+A prototype project starter with grunt.
 
 ## Structure
 ```
-path/
-├── to/                     : Sample
-│   ├── foo/                : Sample
-│   └── bar/                : Sample
-├── bower.json
-├── package.json
-├── README.md
+prototype-starter/
+├── work/                    : Working directory
+│   ├── _scss/
+│   ├── css/
+│   ├── img/
+│   ├── js/
+│   └── index.html
+├── bower.rc
+├── .editorconfig
 ├── .gitignore
-└── .editorconfig           : General editor config
+├── Gruntfile.js
+├── README.md
+├── bower.json
+└── package.json
 ```
 
 ---
 
 MIT
+
+_scss Initial commit  a minute ago
+bower_components  Initial commit  a minute ago
+css Initial commit  a minute ago
+img Initial commit  a minute ago
+js  Initial commit  a minute ago
+index.html
