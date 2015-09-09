@@ -9,7 +9,8 @@ module.exports = function(grunt) {
             scss: 'work/_scss',
             css:  'work/css',
             js:   'work/js',
-            img:  'work/img'
+            img:  'work/img',
+            dist: 'dist'
         };
 
     grunt.initConfig({
@@ -94,6 +95,30 @@ module.exports = function(grunt) {
                 },
                 src: '<%= path.work %>'
             }
+        },
+
+
+        // clean
+        clean: {
+           dist: ['<%= path.dist %>/*']
+        },
+
+        // copy
+        copy: {
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= path.work %>/',
+                        dest: '<%= path.dist %>',
+                        filter: 'isFile',
+                        src: [
+                            '**/*',
+                            '!_scss/**'
+                        ]
+                    }
+                ]
+            }
         }
 
     });
@@ -109,7 +134,10 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
-        'serve'
+        'sass',
+        'autoprefixer',
+        'clean',
+        'copy'
     ]);
 
 };
